@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mudanzas Scott | Servicio de Mudanzas y Fletes 24 Horas en Ciudad Obregón</title>
+  <meta name="description" content="Mudanzas seguras, rápidas y confiables en Ciudad Obregón, Sonora. Servicio disponible las 24 horas en Las Brisas y alrededores. Cotiza gratis por WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0F172A;
+      --navy-light: #1E293B;
+      --orange: #F97316;
+      --orange-hover: #EA580C;
+      --green: #16A34A;
+      --green-hover: #15803D;
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --text: #1E293B;
+      --muted: #64748B;
+      --border: #E2E8F0;
+      --radius: 14px;
+      --shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.2;
+      color: var(--navy);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Top Info Strip */
+    .topbar {
+      background: var(--navy);
+      color: #CBD5E1;
+      font-size: 0.85rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #FFFFFF;
+      font-weight: 500;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background: #22C55E;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+    }
+
+    /* Header / Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--navy);
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--orange);
+      color: #fff;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav ul a:hover {
+      color: var(--orange);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: var(--orange-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-whatsapp {
+      background: var(--green);
+      color: #fff;
+    }
+    .btn-whatsapp:hover {
+      background: var(--green-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--border);
+      color: var(--navy);
+    }
+    .btn-outline:hover {
+      border-color: var(--navy);
+      background: #F1F5F9;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--navy);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      color: #fff;
+      padding: 72px 0 84px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.16) 0%, transparent 70%);
+      top: -120px;
+      right: -100px;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.15);
+      color: #FDBA74;
+      border: 1px solid rgba(249, 115, 22, 0.35);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      color: #FFFFFF;
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: #CBD5E1;
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+      max-width: 560px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.9rem;
+      color: #E2E8F0;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-item svg {
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+
+    /* Quote Card */
+    .quote-card {
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    }
+
+    .quote-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 6px;
+    }
+
+    .quote-card > p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--navy);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--orange);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 48px;
+    }
+
+    .section-label {
+      color: var(--orange);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.75rem, 3vw, 2.4rem);
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: all 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: #CBD5E1;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: #FFF7ED;
+      color: var(--orange);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    /* Why Us / Protection */
+    .features-section {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .visual-box {
+      background: linear-gradient(145deg, #0F172A, #1E293B);
+      color: #fff;
+      border-radius: 20px;
+      padding: 36px;
+      position: relative;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.5rem;
+      color: var(--orange);
+      margin-bottom: 4px;
+    }
+
+    .stat-card span {
+      font-size: 0.85rem;
+      color: #CBD5E1;
+    }
+
+    .checklist {
+      list-style: none;
+      margin-top: 24px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .check-badge {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #DCFCE7;
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Process Steps */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      position: relative;
+    }
+
+    .step-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #FED7AA;
+      margin-bottom: 10px;
+    }
+
+    .step-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.15rem;
+    }
+
+    .step-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    /* Coverage & Location */
+    .location-card {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 20px;
+      padding: 44px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .location-card h2 {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .location-card p {
+      color: #CBD5E1;
+      margin-bottom: 24px;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.06);
+      padding: 14px 18px;
+      border-radius: 12px;
+    }
+
+    .info-item svg {
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .zones-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .zone-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .zone-tag {
+      background: rgba(255,255,255,0.1);
+      color: #F8FAFC;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 780px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      text-align: left;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease;
+      padding: 0 24px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding-bottom: 20px;
+    }
+
+    .faq-icon {
+      transition: transform 0.25s ease;
+      font-size: 1.3rem;
+      color: var(--orange);
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    /* Footer */
+    footer {
+      background: #0B1120;
+      color: #94A3B8;
+      padding: 50px 0 28px;
+      font-size: 0.92rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.85rem;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 99;
+      background: var(--green);
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 999px;
+      box-shadow: 0 12px 28px rgba(22, 163, 74, 0.35);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+
+    .floating-wa:hover {
+      transform: scale(1.05);
+      background: var(--green-hover);
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-grid,
+      .features-grid,
+      .location-card,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+      nav.open {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .nav-actions .btn-outline {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .location-card {
+        padding: 26px;
+      }
+      .floating-wa span {
+        display: none;
+      }
+      .floating-wa {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="live-badge">
+        <span class="live-dot"></span>
+        Abierto las 24 horas • Ciudad Obregón, Sonora
+      </div>
+      <div>
+        Las Brisas, C.P. 85157 • Tel: <strong>+52 644 143 9334</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>
+          </svg>
+        </div>
+        <span>Mudanzas Scott</span>
+      </a>
+
+      <nav id="mainNav">
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#ventajas">¿Por qué elegirnos?</a></li>
+          <li><a href="#proceso">Cómo funciona</a></li>
+          <li><a href="#cobertura">Ubicación</a></li>
+          <li><a href="#faq">Preguntas</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+526441439334" class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          644 143 9334
+        </a>
+        <a href="#cotizar" class="btn btn-primary">Cotizar Ahora</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="cotizar">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-tag">Servicio Profesional en Ciudad Obregón</span>
+        <h1>Tu mudanza segura, rápida y sin complicaciones.</h1>
+        <p>
+          En <strong>Mudanzas Scott</strong> cuidamos cada mueble y caja como si fuera nuestro. Atendemos mudanzas de casa, oficina y fletes locales las <strong>24 horas del día</strong>.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="https://wa.me/526441439334?text=Hola%20Mudanzas%20Scott,%20me%20gustar%C3%ADa%20cotizar%20una%20mudanza." target="_blank" class="btn btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Cotizar por WhatsApp
+          </a>
+          <a href="tel:+526441439334" class="btn btn-outline" style="color:#fff; border-color: rgba(255,255,255,0.28);">
+            Llamar: +52 644 143 9334
+          </a>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Disponibles 24/7
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Carga Protegida con Mantas
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Precios Justos y Claros
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive WhatsApp Quote Form -->
+      <div class="quote-card">
+        <h3>Cotizador Express</h3>
+        <p>Completa estos datos y recibe tu presupuesto directo en WhatsApp.</p>
+        <form id="quoteForm">
+          <div class="form-group">
+            <label for="tipo">Tipo de servicio</label>
+            <select id="tipo" class="form-control" required>
+              <option value="Mudanza de Casa / Depto">Mudanza de Casa o Departamento</option>
+              <option value="Mudanza de Oficina / Negocio">Mudanza de Oficina o Negocio</option>
+              <option value="Flete de Muebles / Carga Ligera">Flete (1 o pocos artículos)</option>
+              <option value="Servicio Urgente Nocturno">Servicio Urgente (24 horas)</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="origen">Colonia de origen</label>
+              <input type="text" id="origen" class="form-control" placeholder="Ej. Las Brisas" required />
+            </div>
+            <div class="form-group">
+              <label for="destino">Colonia de destino</label>
+              <input type="text" id="destino" class="form-control" placeholder="Ej. Zona Centro" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fecha">Fecha aproximada</label>
+              <input type="date" id="fecha" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="tamano">Volumen estimado</label>
+              <select id="tamano" class="form-control">
+                <option value="Pequeño (1-5 muebles)">Pequeño (1-5 muebles)</option>
+                <option value="Mediano (Depto / 1-2 recámaras)">Mediano (1-2 recámaras)</option>
+                <option value="Grande (Casa completa)">Grande (Casa completa)</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 6px; padding: 14px;">
+            Solicitar Cotización Gratis →
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Nuestros Servicios</span>
+        <h2>Soluciones de mudanza adaptadas a lo que necesitas</h2>
+        <p>Ya sea un solo refrigerador o toda tu casa, contamos con el equipo y personal capacitado para moverlo con total cuidado.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Mudanzas Residenciales</h3>
+          <p>Traslado completo para casas, departamentos y cuartos. Cargamos, acomodamos y descargamos tus muebles en la habitación que nos indiques.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h3>Oficinas y Locales</h3>
+          <p>Movemos escritorios, archiveros, equipo de cómputo y mercancía en horarios flexibles (incluso de noche) para no detener tu negocio.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3>Fletes y Carga Ligera</h3>
+          <p>¿Compraste una sala, lavadora o comedor y necesitas llevarlo a tu domicilio hoy mismo? Ofrecemos fletes rápidos en Ciudad Obregón.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Protección de Muebles</h3>
+          <p>Usamos cobijas protectoras, diablitos de carga y cinchos de sujeción profesional para evitar rayones, golpes o caídas durante el trayecto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="features-section" id="ventajas">
+    <div class="container features-grid">
+      <div class="visual-box">
+        <span class="hero-tag" style="margin-bottom: 12px;">Compromiso Mudanzas Scott</span>
+        <h3 style="color:#fff; font-size: 1.7rem; margin-bottom: 10px;">Cuidamos tu patrimonio en cada kilómetro</h3>
+        <p style="color:#CBD5E1; font-size: 0.95rem;">Sabemos lo importante que es tu tranquilidad al cambiarte de hogar o negocio. Por eso trabajamos con equipo limpio y trato amable.</p>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <strong>24 Hrs</strong>
+            <span>Atención todo el día, los 7 días de la semana</span>
+          </div>
+          <div class="stat-card">
+            <strong>100%</strong>
+            <span>Cobertura en Ciudad Obregón y alrededores</span>
+          </div>
+          <div class="stat-card">
+            <strong>Sin Sorpresas</strong>
+            <span>Presupuesto acordado antes de iniciar</span>
+          </div>
+          <div class="stat-card">
+            <strong>Equipados</strong>
+            <span>Diablitos, mantas y cinchos incluidos</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="section-label">¿Por qué elegirnos?</span>
+        <h2 style="font-size: 2rem; margin-bottom: 14px;">Mudarte no tiene por qué ser pesado ni costoso</h2>
+        <p style="color: var(--muted);">Nos diferenciamos por la puntualidad, la honestidad en nuestras tarifas y el cuidado físico de tus pertenencias.</p>
+
+        <ul class="checklist">
+          <li>
+            <span class="check-badge">✓</span>
+            <div>
+              <strong>Disponibilidad inmediata 24/7:</strong>
+              <span style="color: var(--muted); display:block; font-size:0.93rem;">¿Necesitas moverte temprano, en domingo o por la noche? Nos ajustamos a tu horario.</span>
+            </div>
+          </li>
+          <li>
+            <span class="check-badge">✓</span>
+            <div>
+              <strong>Carga y descarga segura:</strong>
+              <span style="color: var(--muted); display:block; font-size:0.93rem;">Contamos con herramientas de carga para manejar sillones, refrigeradores y muebles pesados sin dañar pisos ni paredes.</span>
+            </div>
+          </li>
+          <li>
+            <span class="check-badge">✓</span>
+            <div>
+              <strong>Trato directo y local:</strong>
+              <span style="color: var(--muted); display:block; font-size:0.93rem;">Hablas directamente con nuestro equipo en Ciudad Obregón, sin intermediarios ni comisiones extra.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="proceso">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Así de fácil</span>
+        <h2>Tu mudanza en 3 sencillos pasos</h2>
+        <p>Sin trámites complicados. Reserva tu unidad en minutos desde tu celular.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Pide tu cotización</h3>
+          <p>Envíanos un mensaje por WhatsApp o llámanos indicándonos qué vas a mover y las colonias de origen y destino.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Acordamos fecha y hora</h3>
+          <p>Confirmamos el precio transparente y apartamos el horario que mejor te convenga, de día o de noche.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Cargamos y entregamos</h3>
+          <p>Llegamos puntuales, protegemos tus muebles, realizamos el traslado seguro y los dejamos acomodados en tu nuevo espacio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Coverage -->
+  <section id="cobertura" style="padding-top: 20px;">
+    <div class="container">
+      <div class="location-card">
+        <div>
+          <span class="hero-tag">Ubicación y Contacto</span>
+          <h2>Estamos en Ciudad Obregón, listos para atenderte</h2>
+          <p>Operamos desde Las Brisas cubriendo toda la ciudad, comisarías cercanas y traslados dentro de Sonora.</p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span><strong>Dirección:</strong> Las Brisas, 85157 Ciudad Obregón, Sonora, México</span>
+            </div>
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span><strong>Teléfono / WhatsApp:</strong> +52 644 143 9334</span>
+            </div>
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span><strong>Horario:</strong> Abierto las 24 horas (Lunes a Domingo)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="zones-box">
+          <h3 style="color:#fff; font-size: 1.25rem;">Zonas frecuentes de servicio</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0;">Llegamos rápido a cualquier sector de Ciudad Obregón:</p>
+          <div class="zone-tags">
+            <span class="zone-tag">Las Brisas</span>
+            <span class="zone-tag">Zona Centro</span>
+            <span class="zone-tag">Zona Norte</span>
+            <span class="zone-tag">Villa California</span>
+            <span class="zone-tag">Casa Blanca</span>
+            <span class="zone-tag">Cajeme</span>
+            <span class="zone-tag">Esperanza</span>
+            <span class="zone-tag">Cocorit</span>
+            <span class="zone-tag">Pueblo Yaqui</span>
+            <span class="zone-tag">Valle del Yaqui</span>
+          </div>
+          <a href="https://wa.me/526441439334?text=Hola%20Mudanzas%20Scott,%20quiero%20consultar%20disponibilidad." target="_blank" class="btn btn-primary" style="width:100%; margin-top: 24px;">
+            Consultar Disponibilidad Hoy
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Dudas Frecuentes</span>
+        <h2>Preguntas habituales sobre nuestro servicio</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">
+            ¿Realmente trabajan las 24 horas y los fines de semana?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Sí. Sabemos que muchas personas solo pueden mudarse después del trabajo, en fin de semana o necesitan un flete urgente de madrugada. Estamos disponibles las 24 horas previa llamada o mensaje.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Cómo se calcula el precio de la mudanza?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            El costo depende de la distancia entre el punto de carga y entrega, la cantidad de muebles/cajas y si hay escaleras o maniobras especiales. Siempre te damos el precio total por adelantado, sin cargos escondidos.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Hacen fletes de un solo mueble o electrodoméstico?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            ¡Por supuesto! Si compraste un refrigerador, lavadora, cama o sillón y necesitas trasladarlo dentro de Ciudad Obregón, contamos con servicio de flete rápido y económico.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Con cuánto tiempo de anticipación debo apartar?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Para mudanzas grandes recomendamos apartar con 1 o 2 días de anticipación, pero si necesitas un servicio urgente para el mismo día, llámanos al +52 644 143 9334 para revisar disponibilidad inmediata.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="color: #fff; margin-bottom: 14px;">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+            </div>
+            <span>Mudanzas Scott</span>
+          </div>
+          <p style="max-width: 340px;">
+            Servicio confiable de mudanzas residenciales, comerciales y fletes en Ciudad Obregón, Sonora. Atención personalizada las 24 horas.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color:#fff; margin-bottom: 14px;">Enlaces Rápidos</h4>
+          <ul style="list-style:none; display:grid; gap: 8px;">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#ventajas">¿Por qué elegirnos?</a></li>
+            <li><a href="#proceso">Cómo funciona</a></li>
+            <li><a href="#cotizar">Cotizar en línea</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:#fff; margin-bottom: 14px;">Contacto Directo</h4>
+          <ul style="list-style:none; display:grid; gap: 8px;">
+            <li>Las Brisas, 85157 Cd. Obregón, Son.</li>
+            <li><a href="tel:+526441439334" style="color:#fff; font-weight:600;">+52 644 143 9334</a></li>
+            <li>Horario: Abierto 24 horas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Mudanzas Scott. Todos los derechos reservados.</span>
+        <span>Ciudad Obregón, Sonora, México</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/526441439334?text=Hola%20Mudanzas%20Scott,%20necesito%20informaci%C3%B3n%20sobre%20una%20mudanza." target="_blank" class="floating-wa" aria-label="Chatear por WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    <span>WhatsApp 24/7</span>
+  </a>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mainNav.classList.remove('open'));
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        document.querySelectorAll('.faq-item').forEach(other => {
+          if (other !== item) other.classList.remove('active');
+        });
+        item.classList.toggle('active');
+      });
+    });
+
+    // Set default date to today
+    const fechaInput = document.getElementById('fecha');
+    if (fechaInput) {
+      fechaInput.valueAsDate = new Date();
+    }
+
+    // WhatsApp Quote Form Builder
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const tipo = document.getElementById('tipo').value;
+      const origen = document.getElementById('origen').value.trim();
+      const destino = document.getElementById('destino').value.trim();
+      const fecha = document.getElementById('fecha').value;
+      const tamano = document.getElementById('tamano').value;
+
+      const mensaje = `Hola *Mudanzas Scott*, me gustaría cotizar un servicio:%0A%0A` +
+        `• *Servicio:* ${encodeURIComponent(tipo)}%0A` +
+        `• *Origen:* ${encodeURIComponent(origen)}%0A` +
+        `• *Destino:* ${encodeURIComponent(destino)}%0A` +
+        `• *Fecha:* ${encodeURIComponent(fecha)}%0A` +
+        `• *Volumen:* ${encodeURIComponent(tamano)}%0A%0A` +
+        `¿Me podrían dar un presupuesto aproximado?`;
+
+      window.open(`https://wa.me/526441439334?text=${mensaje}`, '_blank');
+    });
+  </script>
+</body>
+</html>
